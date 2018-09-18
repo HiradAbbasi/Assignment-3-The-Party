@@ -69,6 +69,6 @@ void show()
   //line animation
   strokeWeight(5);
   stroke(255,0,0);
-  ine(x,l,x,l+len);
+  line(x,l,x,l+len);
 }
 }
