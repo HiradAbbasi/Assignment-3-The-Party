@@ -3,12 +3,18 @@ int a = 0;
 //Integer 2
 int fade = -10;
 
+
+
 Drop[] drops = new Drop[100];
+
 //voidSetup and screen size
+
 void setup() 
+
 {
   size(600,600);
   for (int i = 0; i < drops.length; i++) 
+
 {
    drops[i] = new Drop();
   }
@@ -37,7 +43,7 @@ void setup()
   //text size
   textSize(25);
   text("and to show a secret message!",110,375);
-  //text color
+  //text color and fade effect
   fill(255,0,0,fade);
   //text size
   textSize(50);
@@ -48,8 +54,8 @@ void setup()
   textSize(25);
   text("Number of presents:"+ a ,165,400);
 }
-//void mousePressed for fadeing and counting the number of clicks
-void mousePressed()
+  //void mousePressed for fadeing and counting the number of clicks
+  void mousePressed()
 { 
   fade = fade + 10;
   a += 1;
