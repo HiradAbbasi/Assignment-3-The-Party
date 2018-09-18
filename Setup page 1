@@ -1,38 +1,56 @@
+//Integer 1 
 int a = 0;
+//Integer 2
 int fade = -10;
 
 Drop[] drops = new Drop[100];
-
-void setup() {
+//voidSetup and screen size
+void setup() 
+{
   size(600,600);
-  for (int i = 0; i < drops.length; i++) {
-    drops[i] = new Drop();
+  for (int i = 0; i < drops.length; i++) 
+{
+   drops[i] = new Drop();
   }
 }
-
-void draw() {
+  //voidDraw
+  void draw() 
+{
+  //background
   background(255, 255, 0);
+  //background color
   fill(255,51,221);
+  //textSize for"Lets Have a Party!"
   textSize(50);
   text("Lets Have a Party!",90,300);
-  for (int i = 0; i < drops.length; i++) {
+  for (int i = 0; i < drops.length; i++)
+ {
     drops[i].fall();
     drops[i].show();
-  }
+ }
+  //All of the words inside the program other than "Lets Have a Party!"
+  //text color
   fill(255,51,221);
+  //text size
   textSize(25);
   text("Click screen to give presents",120,350);
+  //text size
   textSize(25);
   text("and to show a secret message!",110,375);
+  //text color
   fill(255,0,0,fade);
+  //text size
   textSize(50);
   text("This Party is the best!!",35,200);
+  //text color
   fill(255,51,221);
+  //text size
   textSize(25);
   text("Number of presents:"+ a ,165,400);
 }
-
-void mousePressed() {
+//void mousePressed for fadeing and counting the number of clicks
+void mousePressed()
+{ 
   fade = fade + 10;
   a += 1;
 }
